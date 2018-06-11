@@ -1,0 +1,6 @@
+  {
+    "name": "MDL Chrome Plugin",
+    "version": "1.0",
+    "description": "Build an Extension for the hack!",
+    "manifest_version": 2
+  }
