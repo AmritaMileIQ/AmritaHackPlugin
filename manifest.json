@@ -5,10 +5,10 @@
     "manifest_version": 2,
     "permissions": ["storage"],
      "chrome_url_overrides": {
-		"newtab": "test.html"
+		"newtab": "mdlTab.html"
 	  },
 	"content_scripts": [{
-     "js": ["popup.js","get-drives.js","mdl.js","jquery-1.8.3.js"],
+     "js": ["get-drives.js","mdl.js","jquery-1.8.3.js"],
      "matches": ["http://*/*", "https://*/*"]
    }],
     "browser_action": {

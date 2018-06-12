@@ -2,10 +2,22 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 200px;
+    float: left;
+    padding: 10x;
+    left: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    float: left;
+    padding: 10x;
+    left: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 .card-container {
@@ -13,9 +25,11 @@
 }
 
 .container {
- 	width: 80%;
+ 	width: 90%;
     height: 200px;
-    background: aqua;
+    /* background: aqua; */
     margin: auto;
     padding: 10px;
+    padding-left: 20px;
+    float: left;
 }
