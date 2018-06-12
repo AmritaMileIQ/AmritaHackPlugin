@@ -2,15 +2,18 @@
 <html>
 <head>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="get-drives.js"></script>
+    <script src="post-expenses.js"></script>
     <script type="text/javascript">
        	 //onclick='expenses("bs-LolSWEeiSwL65ypsPBA")'
        	 //drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-25T00:00:00Z", "2017-11-27T23:59:59Z")
        	 $(document).ready(function(){
      	$( "#btn" ).click(function() {
- 			drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-25T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
-  			alert(response[0]['appVersion']); // this is where you get the return value
-			});
+     		create_expenses('bs-LolSWEeiSwL65ypsPBA', 20.21, 2, "amrita hack1", "2018-06-12T00:00:00", "this is hack note", function(response){
+     			alert(response['id'])
+     		});
+ 			//drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-25T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
+  			//alert(response[0]['appVersion']); 
+			//});
 		});
 	});
     </script>
