@@ -8,6 +8,8 @@ function drives(user_parse_id, gt_date, lt_date, callback){
     alert(get_drive_url)
     $.ajax({
       url: get_drive_url,
+      crossDomain: true,
+    dataType: 'json',
       headers: {
         'X-MileIQ-Application-Id':'E7EC264F-F470-4C7C-95AF-4B5D08C57346',
         'X-MileIQ-API-Key':'1BD272D1-3DC4-4AF4-BCC6-D125C521788C',
