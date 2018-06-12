@@ -7,7 +7,6 @@ function create_expenses(user_parse_id, amount, classify, name, date, notes, cal
   		"expense_date": date,
   		"notes": notes
 	    }
-	    alert(JSON.stringify(expense))
       $.ajax({
       		crossDomain: true,
       		dataType: 'json',
@@ -21,11 +20,11 @@ function create_expenses(user_parse_id, amount, classify, name, date, notes, cal
 	      	type: 'POST',
 	      	data: JSON.stringify(expense),
 	      	success: function(response) {
-	        alert(JSON.stringify(response))
-	        callback(response);
+	        	alert(JSON.stringify(response))
+	        	callback(response);
 	      	},
 	      	error: function() {
-	        alert('fail')
+	        	alert('fail')
 	      	}
       	});
   });
