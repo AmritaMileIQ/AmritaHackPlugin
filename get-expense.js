@@ -19,11 +19,11 @@ function expenses(user_parse_id, callback) {
             format: 'json'
           },
           success: function(response) {
-            alert('success')
+            //alert('success')
             callback(response);
           },
           error: function() {
-            alert('fail')
+            //alert('fail')
           }
       });
   });
