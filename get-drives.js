@@ -5,7 +5,7 @@ function drives(user_parse_id, gt_date, lt_date, callback){
     var date_url = '"endedAt": {"$gte": {"__type": "Date", "iso": "'+ gt_date +'"}, "$lt": {"__type": "Date", "iso": "'+ lt_date + '"}},'
     var user_url = '"user": {"__type": "Pointer", "className": "whocares", "objectId": "' + user_parse_id +'"}}&limit=14&skip=0&roundtrip=0'
     get_drive_url = base_url + date_url + user_url;
-    alert(get_drive_url)
+    //alert(get_drive_url)
     $.ajax({
       url: get_drive_url,
       crossDomain: true,
@@ -21,11 +21,11 @@ function drives(user_parse_id, gt_date, lt_date, callback){
         format: 'json'
       },
       success: function(response) {
-        alert('pass');
+        //alert('pass');
         callback(response['results']);
       },
       error: function() {
-        alert('fail')
+        //alert('fail')
       }
     });
 });
