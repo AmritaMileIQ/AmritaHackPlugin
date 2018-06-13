@@ -31,7 +31,7 @@ function embedCardsInCalendar(){
 			var dayOfExpense = expenseCreationDate.getDate();
 			var dayElementOnCalendar = getTestDayElement(dayOfExpense);
 			var expenseHTML = "<div class=\"expenseCard\">" +
-						            "<p><b>"+ expense.merchant_name_and_location +"</b><br>"+
+						            "<p><b>"+ expense.merchant_name +"</b><br>"+
 						            "Value $"+ expense.amount+"</p>"+
 						      "</div>";
 		$(dayElementOnCalendar).append(expenseHTML);
