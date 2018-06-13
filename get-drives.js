@@ -1,4 +1,4 @@
-function drives(user_parse_id, gt_date, lt_date, callback){
+function get_drives(user_parse_id, gt_date, lt_date, callback){
   $(document).ready(function() {
     var base_url = 'https://miqapi-staging.mobiledatalabs.com/1/classes/Drive?where={'
     var date_url = '"endedAt": {"$gte": {"__type": "Date", "iso": "'+ gt_date +'"}, "$lt": {"__type": "Date", "iso": "'+ lt_date + '"}},'
