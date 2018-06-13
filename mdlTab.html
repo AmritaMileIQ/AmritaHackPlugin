@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="main.css">
       <script type="text/javascript" src="jquery-1.8.3.js"></script>
       <script type="text/javascript"src="test-plugin.js"></script>
+      <script type="text/javascript"src="login.js"></script>
       <script type="text/javascript"src="api-headers.js"></script>
       <script type="text/javascript"src="get-drives.js"></script>
       <script type="text/javascript"src="get-expense.js"></script>
@@ -24,6 +25,16 @@
    <input id="post-expense-btn" type="button"  value="Post Expense" />
    <input id="patch-expenses-btn" type="button"  value="Classify Expenses" />
    <input id="stats-btn" type="button"  value="Get Stats" />
+   <input id="logout" type="button" value="Logout" />
+   <div class="login">
+      <h2 class="loginbox">Spend | MileIQ</h2>
+      <form class="loginbox" autocomplete="off">
+         <div><input placeholder="Username" type="text" id="username"></input></div>
+         <div><input placeholder="Password" type="password" id="password"></input></div>
+         <button id="submit">Login</button>
+         <p class="error" hidden="true">Error. Please enter correct Username &amp; password.</p>
+      </form>
+   </div>
    <div class="container">
       <!--<div class="card">
          <img src="icon.png" alt="Avatar" style="width:100%">

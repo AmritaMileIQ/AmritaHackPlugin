@@ -1,5 +1,16 @@
 
 $(document).ready(function(){
+      chrome.storage.local.get('signin', function(result){
+        signin = result;
+        if (result['signin'] == true) {
+          $('.login').hide();
+          $('.container').show();
+        } 
+        else {
+          $('.container').hide();
+          $('.login').show();
+      }
+      });
      	display_test_buttons();
 	});
 
