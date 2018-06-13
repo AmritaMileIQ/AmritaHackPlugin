@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Build an Extension for the hack!",
     "manifest_version": 2,
-    "permissions": ["storage", "activeTab"],
+    "permissions": ["storage", "activeTab", "tabs"],
      "chrome_url_overrides": {
 		"newtab": "mdlTab.html"
 	  },
@@ -18,8 +18,9 @@
      "matches":["file:///*Bofa.htm"]
     },
     {
-     "js":["jquery-1.8.3.js", "api-headers.js", "get-drives.js", "calendarIntegration.js"],
-     "matches":["https://calendar.google.com/calendar/*"]
+      "js":["jquery-1.8.3.js", "api-headers.js", "get-drives.js", "calendarIntegration.js"],
+      "css":["calendarDrive.css"],
+      "matches":["https://calendar.google.com/calendar/*"]
     }
     ],
     "browser_action": {
