@@ -1,0 +1,70 @@
+var drives = [{
+		"state": 3,
+		"driveId": 562949953427738,
+		"routeTotalDrivesClassified": 0,
+		"routeCategory": 0,
+		"startLocCountry": "US",
+		"mph": 16.148308968141802,
+		"objectId": "Upu-7G2gEeienwpYCvQBsQ",
+		"endLocCity": "Foster City",
+		"endedAt": {
+		    "__type": "Date",
+		    "iso": "2018-06-11T13:00:00.000Z"
+		},
+		"routeUnclassifiedDriveCount": 1,
+		"value": 0,
+		"user": {
+		    "__type": "Pointer",
+		    "className": "_User",
+		    "objectId": "7vsH9G2eEeiszwpYCvQBsQ"
+		},
+		"routeClassificationsToPrompt": 3,
+		"distance": 0,
+		"startedAt": {
+		    "__type": "Date",
+		    "iso": "2018-06-11T12:15:00.000Z"
+		},
+		"parkingFees": 0,
+		"createdAt": "2018-06-11T12:15:00.000Z",
+		"roundTripId": null,
+		"startLoc": {
+		    "__type": "GeoPoint",
+		    "longitude": -122.181725,
+		    "latitude": 37.452961000000002
+		},
+		"origin": 0,
+		"routePurpose": "",
+		"routeShouldAutoClassify": false,
+		"driveClassificationStreakStartAt": 0,
+		"endLocState": "CA",
+		"startLocCity": "Menlo Park",
+		"startLocName": "Menlo Park",
+		"vehicle": "",
+		"vehicle_type": "automobile",
+		"routeID": 1800052001,
+		"startLocState": "CA",
+		"googleDistance": 90,
+		"routePromptAttempts": 0,
+		"startLocHood": "",
+		"autoClassified": 0,
+		"endLocName": "Foster City",
+		"endLoc": {
+		    "__type": "GeoPoint",
+		    "longitude": -122.274436253,
+		    "latitude": 37.5682580876
+		},
+		"location_service_ver": 1,
+		"endLocHood": "",
+		"notes": "",
+		"potentialValues": {
+		    "personal": {
+		        "charity": 12.600000000000001,
+		        "medical": 16.199999999999999,
+		        "moving": 16.199999999999999
+		    },
+		    "business": {
+		        "default": 49.050000000000004
+		    }
+		},
+		"tollFees": 0
+	}]

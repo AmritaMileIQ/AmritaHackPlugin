@@ -2,7 +2,7 @@
 $(document).ready(function(){
      	$( "#get-drive-btn" ).click(function() {
  			drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-25T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
-  			alert(response[0]['appVersion']);
+  			alert(response.length);
 			});
 		});
 
@@ -19,6 +19,13 @@ $(document).ready(function(){
      			alert(response['id'])
      		});
 		});
+
+
+		$( "#post-drive-btn" ).click(function() {
+ 			classify('8NeGPsnxEeeEqwpYCvQAIA', 'NuzQcMnyEee5DwpYCvQCGg', 2, function(response){
+ 				alert(response['code'])
+ 			});
+		});
 	});
 
 $(document).ready(function(){
@@ -30,8 +37,6 @@ $(document).ready(function(){
               break;
             }
             createDriveInTab(response[i]);
-
-
           }
         }
 			});
@@ -49,5 +54,3 @@ function createDriveInTab(drive) {
 
 
 }
-//onclick='expenses("bs-LolSWEeiSwL65ypsPBA")'
-       	 //drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-25T00:00:00Z", "2017-11-27T23:59:59Z")
