@@ -10,3 +10,13 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    // read changeInfo data and do something with it (like read the url)
+    if (changeInfo.url && changeInfo.url == "https://calendar.google.com/calendar/r/month/2017/11/1") {
+      // do something here
+      chrome.tabs.sendMessage( tabId, {
+        message: 'shouldRerunCalendar',
+      })
+    }
+  }
+);
