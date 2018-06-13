@@ -5,7 +5,7 @@ $(document).ready(function(){
   		for (var i = 0; i < response.length; i++){
   			if (response[i]['createdAt'] > "2017-11-25T00:00:00Z" && response[i]['createdAt'] < "2017-11-25T23:59:59Z"){
   			var drivesHTML = "<h2>Drives</h2>";
-			element.append(drivesHTML)
+			$(element).append(drivesHTML);
   		}
   		}
   		
