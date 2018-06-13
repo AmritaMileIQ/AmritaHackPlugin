@@ -20,6 +20,12 @@ function display_test_buttons(){
      		});
 		});
 
+		$( "#patch-expenses-btn" ).click(function() {
+ 			classify_expenses('bs-LolSWEeiSwL65ypsPBA', 2, "298d89ee55b84f649ee6041a099e577d", function(response){
+     			alert(response['classification'])
+     		});
+		});
+
 
 		$( "#post-drive-btn" ).click(function() {
  			classify_drives('8NeGPsnxEeeEqwpYCvQAIA', 'NuzQcMnyEee5DwpYCvQCGg', 2, function(response){
