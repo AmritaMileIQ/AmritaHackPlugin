@@ -13,7 +13,7 @@
    },
   {
    "js":["jquery-1.8.3.js", "bofa-handler.js","post-expenses.js","api-headers.js"],
-   "matches":["file:///Users/vivoora/Dev/Hack/Bofa.htm"]
+   "matches":["file:///*Bofa.htm"]
  }
 ],
     "browser_action": {
