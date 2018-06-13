@@ -1,4 +1,4 @@
-function classify(user_parse_id, drive_parse_id, classify_state, callback) {
+function classify_drives(user_parse_id, drive_parse_id, classify_state, callback) {
   $(document).ready(function() {
 	get_drives_by_drive_id(user_parse_id, drive_parse_id, function(response){
 		response['state'] = classify_state

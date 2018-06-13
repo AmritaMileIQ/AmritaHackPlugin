@@ -22,7 +22,7 @@ function display_test_buttons(){
 
 
 		$( "#post-drive-btn" ).click(function() {
- 			classify('8NeGPsnxEeeEqwpYCvQAIA', 'NuzQcMnyEee5DwpYCvQCGg', 2, function(response){
+ 			classify_drives('8NeGPsnxEeeEqwpYCvQAIA', 'NuzQcMnyEee5DwpYCvQCGg', 2, function(response){
  				alert(response['code'])
  			});
 		});

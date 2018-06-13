@@ -23,7 +23,7 @@ $(document).ready(function(){
         if ( response.results.length > 0 ){
           for(var j=0;j<response.results.length;j++){
              if ( j >= 5) {
-               break;
+              break;
              }
             createExpenseInTab(response.results[j]);
           }
