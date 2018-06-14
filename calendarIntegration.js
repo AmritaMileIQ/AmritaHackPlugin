@@ -1,5 +1,9 @@
 $(document).ready(function(){
-	$( "div[role='main']" ).removeAttr('jsaction');
+	//$( "div[role='main']" ).removeAttr('jsaction');
+	$("#clickable a").click(function(e) {
+   		//do something
+   		e.stopPropagation();
+	})
 	embedCardsInCalendar();
 });
 
@@ -11,15 +15,28 @@ function embedCardsInCalendar(){
   			var driveCreationDate = new Date(drive.createdAt);
   			var dayOfDrive = driveCreationDate.getDate();
   			var dayElementOnCalendar = getTestDayElement(dayOfDrive);
-  			var drivesHTML = "<div class=\"calendarCard\" role=button>" +
+  			var drivesHTML = "<div class=\"driveCard\" role=button>" +
 						            "<p><b>"+ drive.startLocCity +" -> "+ drive.endLocCity +"</b><br>"+
 						            "$"+ drive.potentialValues.business.default+"</p>"+
 					      	"</div>";
 			$(dayElementOnCalendar).append(drivesHTML);
-			$(dayElementOnCalendar).click(function(){ console.log(test)})
-			$(dayElementOnCalendar).children().click(function(){ console.log(test)})
   		}
 	});
+
+	get_expenses("bs-LolSWEeiSwL65ypsPBA", "2018-06-01", "2018-07-01", function(response){
+		//alert(response['count']);
+		for (var i = 0; i < response.results.length; i++){
+			var expense = response.results[i];
+			var expenseCreationDate = new Date(expense.expense_date);
+			var dayOfExpense = expenseCreationDate.getDate();
+			var dayElementOnCalendar = getTestDayElement(dayOfExpense);
+			var expenseHTML = "<div class=\"expenseCard\">" +
+						            "<p><b>"+ expense.merchant_name +"</b><br>"+
+						            "Value $"+ expense.amount+"</p>"+
+						      "</div>";
+		$(dayElementOnCalendar).append(expenseHTML);
+  		}
+		});
 }
 
 function getTestDayElement(day){
