@@ -21,7 +21,7 @@ function updateElements() {
           var costString = ("$" + cost).fontcolor("green");
           
           var elem = document.createElement("img");
-          elem.setAttribute("src", chrome.extension.getURL("icon.png"));
+          elem.setAttribute("src", chrome.extension.getURL("icon_round.svg"));
 
           var costHTML = "<strong>  " +costString +"</br> </strong>";
           var potentialValueHTML = "<h2> POTENTIAL VALUE </h2>"
