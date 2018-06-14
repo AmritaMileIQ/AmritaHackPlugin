@@ -79,8 +79,8 @@ var driveDate = getReadableDate(drive.createdAt);
      "<h2 class='cardTitle'>"+drive.startLocCity+" to "+ drive.endLocCity+"</h2>"+
      "<h2 class='cardSubTitle'>"+driveDate+ " Value: $"+ Math.round(drive.potentialValues.business.default)+"</h2>"+
      "<div class='btnHolder'>"+
-     "<button  class='personalBtn' id='"+ drive.objectId + "'><img class='btnIcon' src='icons/personal_icon.png'></button>"+
-     "<button  class='businessBtn' id='"+ drive.objectId + "'><img class='btnIcon' src='icons/business_icon.png'></button>"+
+     "<button  class='personalBtn personal-drive' id='"+ drive.objectId + "'><img class='btnIcon' src='icons/personal_icon.png'></button>"+
+     "<button  class='businessBtn business-drive' id='"+ drive.objectId + "'><img class='btnIcon' src='icons/business_icon.png'></button>"+
   "</li>";
   /*var card = "<div class=\"card\">" +
          "<img src=\"icon.png\" style=\"width:100%\">" +
@@ -116,16 +116,41 @@ return fulldate;
 }
 
 function classifyDriveOnClickEventHandler() {
+
   $(".business-drive").click(function() {
           classify_drives(get_user_parse_id(), $(this).attr('id'), CLASSIFY_DRIVE_BUSINESS, function(response){
-            alert(response['code'])
+            //alert(response['code'])
         });
+      var $this = $(this),
+      $cards = $('.drives').find('.card'),
+      $current = $cards.filter('.card--current'),
+      $next = $cards.filter('.card--next');
+
+      $cards.removeClass('card--current card--out card--next');
+
+      $nextToNext = $next.next();
+      $current.addClass('card--out');
+      $next.addClass('card--current');
+      $nextToNext.addClass('card--next');
+
   });
 
   $(".personal-drive").click(function() {
           classify_drives(get_user_parse_id(), $(this).attr('id'), CLASSIFY_DRIVE_PERSONAL, function(response){
-            alert(response['code'])
+            //alert(response['code'])
         });
+
+        var $this = $(this),
+        $cards = $('.drives').find('.card'),
+        $current = $cards.filter('.card--current'),
+        $next = $cards.filter('.card--next');
+
+        $cards.removeClass('card--current card--out card--next');
+
+        $nextToNext = $next.next();
+        $current.addClass('card--out');
+        $next.addClass('card--current');
+        $nextToNext.addClass('card--next');
   });
 }
 
@@ -165,14 +190,38 @@ function classifyExpenseOnClickEventHandler() {
   $(".business-expense").click(function() {
           var expense_id = $(this).attr('id');
           classify_expenses(get_user_parse_id(), CLASSIFY_EXPENSE_BUSINESS , expense_id, function(response){
-            alert(response['classification'])
+            //alert(response['classification'])
         });
+
+        var $this = $(this),
+        $cards = $('.spend').find('.card'),
+        $current = $cards.filter('.card--current'),
+        $next = $cards.filter('.card--next');
+
+        $cards.removeClass('card--current card--out card--next');
+
+        $nextToNext = $next.next();
+        $current.addClass('card--out');
+        $next.addClass('card--current');
+        $nextToNext.addClass('card--next');
   });
 
   $(".personal-expense").click(function() {
          var expense_id = $(this).attr('id');
          classify_expenses(get_user_parse_id(), CLASSIFY_EXPENSE_PERSONAL , expense_id, function(response){
-            alert(response['classification'])
+            //alert(response['classification'])
         });
+
+        var $this = $(this),
+        $cards = $('.spend').find('.card'),
+        $current = $cards.filter('.card--current'),
+        $next = $cards.filter('.card--next');
+
+        $cards.removeClass('card--current card--out card--next');
+
+        $nextToNext = $next.next();
+        $current.addClass('card--out');
+        $next.addClass('card--current');
+        $nextToNext.addClass('card--next');
   });
 }
