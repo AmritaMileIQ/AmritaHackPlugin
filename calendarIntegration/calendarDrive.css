@@ -1,0 +1,39 @@
+.driveCard {
+/*    width: 100px;
+    height: 30px;*/
+    border-style: groove;
+    background-color: bisque;
+}
+
+.expenseCard {
+/*    width: 100px;
+    height: 30px;*/
+    border-style: groove;
+    background-color: darkcyan;
+}
+
+.btn-business-shape {
+  width: 56px;
+  height: 44px;
+  border-radius: 6px;
+  background-color: #0163b0;
+}
+
+.btn-personal-shape {
+  width: 56px;
+  height: 44px;
+  border-radius: 6px;
+  background-color: #00bcf2;
+}
+
+.x32_PersonalIcon_DonutChart {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.x24_BusinessIcon_DonutChart {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
