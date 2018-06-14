@@ -11,7 +11,7 @@ $(document).ready(function(){
           $('.login').show();
       }
       });
-     	display_test_buttons();
+     	//display_test_buttons();
 	});
 
 $(document).ready(function(){

@@ -10,7 +10,7 @@
 	  "content_scripts": [
     {
      "js": ["jquery-1.8.3.js", "get-drives.js", "mdl.js"],
-     "exclude_matches": ["https://calendar.google.com/calendar/*"],
+     "exclude_matches": ["https://calendar.google.com/calendar/*", "https://www.google.com/maps/dir/*"],
      "matches": ["http://*/*", "https://*/*"]
     },
     {
@@ -21,7 +21,11 @@
       "js":["jquery-1.8.3.js", "api-headers.js", "get-expense.js", "get-drives.js", "calendarIntegration/calendarIntegration.js"],
       "css":["calendarIntegration/calendarDrive.css"],
       "matches":["https://calendar.google.com/calendar/*"]
-    }
+    },
+     {
+       "js":["jquery-1.8.3.js", "maps_handler.js"],
+       "matches": ["https://www.google.com/maps/dir/*"]
+     }
     ],
     "browser_action": {
 	   "default_icon": "icon.png",
@@ -32,5 +36,5 @@
       "scripts": ["background.js"],
       "persistent": false
     },
-    "web_accessible_resources": ["*.svg"]
+    "web_accessible_resources":["*.png", "*.svg"]
   }
