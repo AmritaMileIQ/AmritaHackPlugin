@@ -6,9 +6,9 @@ https://spend-staging.mobiledatalabs.com/api/1/expenses/?&ignore_categories=true
 function get_expenses(user_parse_id, from_date, to_date, callback) {
   from_date = '2018-05-01';
   to_date ='2018-07-01'
-  var base_url = 'https://spend-staging.mobiledatalabs.com/api/1/expenses/?&ignore_categories=true&page=1&page_size=1&expense_date__gte='
-  //var date_url = base_url + from_date +'&expense_date__lte=' + to_date + '&classification__in=0'  //  only unclassified expenses
-  var date_url = base_url + from_date +'&expense_date__lte=' + to_date   // all expenses
+  var base_url = 'https://spend-staging.mobiledatalabs.com/api/1/expenses/?&ignore_categories=true&page=1&page_size=40&expense_date__gte='
+  var date_url = base_url + from_date +'&expense_date__lte=' + to_date + '&classification__in=0'  //  only unclassified expenses
+  //var date_url = base_url + from_date +'&expense_date__lte=' + to_date   // all expenses
   $(document).ready(function() {
       $.ajax({
           url: date_url ,
