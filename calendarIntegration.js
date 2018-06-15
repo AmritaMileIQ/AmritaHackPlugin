@@ -158,7 +158,7 @@ function embedCardsInCalendar(){
       var expenseHTML = "<div style=\"height:100%; width:100%;\">" +
                             "<div style=\"float:right;margin-top:-52px;height:30px\">" + 
                             "<p class=\"time\">"+ "<span>" + timeOfExpense + "</span>" +
-                            "<img style=\"margin-left:2px;float:right;\"src=\"" + chrome.extension.getURL("SpendIcon.png") + "\" class=\"Spend_SymbolCircle\"/></p></div>" + 
+                            "<img src=\"" + chrome.extension.getURL("spend-symbol-circle.svg") + "\" class=\"Spend_SymbolCircle\"/></p></div>" + 
                             "<div class=\"expenseCard\">" +
                                   "<p class=\"expenseTitle\">"+ "$"+ Math.round(expense.amount * 10) / 10 + "<br>"+
                                     "<div class=\"expenseDetails\">" +

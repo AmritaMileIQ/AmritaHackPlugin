@@ -108,7 +108,7 @@
 .Spend_SymbolCircle {
   width: 20px;
   height: 20px;
-  background-color: #9ad93a;
+  object-fit: contain;
 }
 
 .time {
