@@ -11,6 +11,11 @@ $(document).ready(function(){
           $('.login').show();
       }
       });
+
+      $('.demo1').easyTicker({
+				direction: 'up',
+				easing: 'swing'
+			});
      	//display_test_buttons();
 	});
 
@@ -161,7 +166,7 @@ var expenseDate = getReadableDate(expense.expense_date);
      "<div class='cardTop'></div>"+
      "<h2 class='cardTitle'> $"+expense.amount+"</h2>"+
      "<h2 class='cardSubTitle'>"+expenseDate+ " Merchant: "+ expense.merchant_name+"</h2>"+
-     "<div class='btnHolder'>"+
+     "<div class='btnHolder spendbtnHolder'>"+
      "<button  class='personalBtn business-expense' id='"+ expense.id + "'><img class='btnIcon' src='icons/personal_icon.png'></button>"+
      "<button  class='businessBtn personal-expense' id='"+ expense.id + "'><img class='btnIcon' src='icons/business_icon.png'></button>"+
   "</li>";

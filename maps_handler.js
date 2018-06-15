@@ -18,16 +18,21 @@ function updateElements() {
           }
           var numOfMiles = text.substring(text.indexOf(findString) + findString.length, text.indexOf("miles")).trim()
           var cost = (numOfMiles * 0.535 ).toFixed(2)
-          var costString = ("$" + cost).fontcolor("green");
+          var costString = "$" + cost;
           
-          var elem = document.createElement("img");
-          elem.setAttribute("src", chrome.extension.getURL("icon.png"));
+          var imageElement = document.createElement("img");
+          imageElement.setAttribute("src", chrome.extension.getURL("icon_round.svg"));
+          imageElement.setAttribute("style", "margin-top:-3px;");
 
-          var costHTML = "<strong>  " +costString +"</br> </strong>";
-          var potentialValueHTML = "<h2> POTENTIAL VALUE </h2>"
-          $(parent[i]).append(elem);
-          $(parent[i]).append(costHTML);
-          $(parent[i]).append(potentialValueHTML);
+         var pElement = document.createElement("span");
+         pElement.setAttribute("style", "vertical-align:top; margin-left:5px;color:green");
+         pElement.append(costString);
+
+         var potentialValueHTML = "<h2> POTENTIAL VALUE </h2>"
+         
+         $(parent[i]).append(imageElement);
+         $(parent[i]).append(pElement)
+         $(parent[i]).append(potentialValueHTML);
       } 
    } 
 }
