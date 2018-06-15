@@ -110,7 +110,7 @@ function disableEvents(){
 
 
 function embedCardsInCalendar(){
-	get_drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-05T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
+	get_drives(get_user_parse_id(), "2018-06-01T00:00:00Z", "2018-06-27T23:59:59Z", function(response){
   		//alert(response[0]['appVersion']);
   		for (var i = 0; i < response.length; i++){
   			var drive = response[i];
@@ -145,18 +145,15 @@ function embedCardsInCalendar(){
 							            "</div>";
 			$(dayElementOnCalendar).append(drivesHTML);
   		}
-	});
 
+      get_expenses(get_user_parse_id(), "2018-06-05", "2018-07-01", function(response){
+    //alert(response['count']);
 
-
-	get_expenses("bs-LolSWEeiSwL65ypsPBA", "2018-06-05", "2018-07-01", function(response){
-		//alert(response['count']);
-
-		for (var i = 0; i < response.results.length; i++){
-			var expense = response.results[i];
-			var expenseCreationDate = new Date(expense.expense_date);
-			var dayOfExpense = expenseCreationDate.getDate();
-			var dayElementOnCalendar = getTestDayElement(dayOfExpense);
+    for (var i = 0; i < response.results.length; i++){
+      var expense = response.results[i];
+      var expenseCreationDate = new Date(expense.expense_date);
+      var dayOfExpense = expenseCreationDate.getDate();
+      var dayElementOnCalendar = getTestDayElement(dayOfExpense);
       var timeOfExpense = expenseCreationDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
       var expenseHTML = "<div style=\"height:100%; width:100%;\">" +
                             "<div style=\"float:right;margin-top:-52px;height:30px\">" + 
@@ -182,16 +179,21 @@ function embedCardsInCalendar(){
                                   "</div>" +
                             "</div>" +
                           "</div>";
-			$(dayElementOnCalendar).append(expenseHTML);
-  		}
-  		// var elements = document.getElementsByClassName('expense_personal_btn');
-  		// console.log($(elements[0]));
-  		// $(elements[0]).onclick = function(e){
-    // 		alert("expense business clicked!");
-    // 		e.stopPropagation();
-    // 	}
-    // 	console.log($(elements[0]));
+      $(dayElementOnCalendar).append(expenseHTML);
+      }
+      // var elements = document.getElementsByClassName('expense_personal_btn');
+      // console.log($(elements[0]));
+      // $(elements[0]).onclick = function(e){
+    //    alert("expense business clicked!");
+    //    e.stopPropagation();
+    //  }
+    //  console.log($(elements[0]));
+  });
 	});
+
+
+
+	
 }
 
 
