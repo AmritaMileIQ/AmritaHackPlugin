@@ -3,8 +3,8 @@ $(document).ready(function() {
 
         event.preventDefault(); // prevent PageReLoad
 
-       var ValidEmail = $('#username').val() === 'a'; // User validate
-       var ValidPassword = $('#password').val() === 'a'; // Password validate
+       var ValidEmail = true //$('#username').val() === 'a'; // User validate
+       var ValidPassword = true //$('#password').val() === 'a'; // Password validate
 
         if (ValidEmail === true && ValidPassword === true) { // if ValidEmail & ValidPassword
             chrome.storage.local.set({'signin': true});

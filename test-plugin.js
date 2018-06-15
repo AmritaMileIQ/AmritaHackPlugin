@@ -1,10 +1,10 @@
 function display_test_buttons(){
 	$(document).ready(function(){
      	$( "#get-drive-btn" ).click(function() {
- 			get_drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-25T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
+ 			get_drives(get_user_parse_id(), "2018-03-07T00:00:00Z", "2018-03-10T23:59:59Z", function(response){
   			alert(response.length);
 			});
-		});
+		});//"6qXoOAW6EeefM876KXeJ8A"
 
 
 		$( "#get-expenses-btn" ).click(function() {

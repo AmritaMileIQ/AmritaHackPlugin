@@ -28,7 +28,7 @@ $(document).ready(function(){
 });
 
 function embedCardsInCalendar(){
-	get_drives("6qXoOAW6EeefM876KXeJ8A", "2017-11-01T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
+	get_drives(get_user_parse_id(), "2017-11-01T00:00:00Z", "2017-11-27T23:59:59Z", function(response){
   		//alert(response[0]['appVersion']);
   		for (var i = 0; i < response.length; i++){
   			var drive = response[i];
@@ -49,7 +49,7 @@ function embedCardsInCalendar(){
   		}
 	});
 
-	get_expenses("bs-LolSWEeiSwL65ypsPBA", "2018-06-01", "2018-07-01", function(response){
+	get_expenses(get_user_parse_id(), "2018-06-01", "2018-07-01", function(response){
 		//alert(response['count']);
 		for (var i = 0; i < response.results.length; i++){
 			var expense = response.results[i];

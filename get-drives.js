@@ -1,8 +1,14 @@
 function get_drives(user_parse_id, gt_date, lt_date, callback){
+  gt_date = "2018-05-01T00:00:00Z"
+  lt_date = "2018-07-01T00:00:00Z"
   $(document).ready(function() {
     var base_url = 'https://miqapi-staging.mobiledatalabs.com/1/classes/Drive?where={'
     var date_url = '"endedAt": {"$gte": {"__type": "Date", "iso": "'+ gt_date +'"}, "$lt": {"__type": "Date", "iso": "'+ lt_date + '"}},'
-    var user_url = '"user": {"__type": "Pointer", "className": "whocares", "objectId": "' + user_parse_id +'"}}&limit=14&skip=0&roundtrip=0'
+    // get all drives
+    //var user_url = '"user": {"__type": "Pointer", "className": "whocares", "objectId": "' + user_parse_id +'"}}&limit=14&skip=0&roundtrip=0' 
+
+    //get only unclassified drives
+    var user_url = '"state":{"$in":[0]},"user": {"__type": "Pointer", "className": "whocares", "objectId": "' + user_parse_id +'"}}&limit=14&skip=0&roundtrip=0' 
     get_drive_url = base_url + date_url + user_url;
     $.ajax({
       url: get_drive_url,

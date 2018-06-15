@@ -22,9 +22,9 @@ $(document).ready(function(){
     var amount = amountText.substring(1,amountText.length);
       //console.log( $( this ).parent().find('.trans-desc-cell').text());
       var desc = $( this ).parent().find('.trans-desc-cell').text();
-      var merchant = desc.substring(73,desc.length);
+      var merchant = desc.substring(73, desc.length);
       //console.log(merchant);
-      create_expenses('bs-LolSWEeiSwL65ypsPBA', amount, 1, merchant, date, merchant, function(response){
+      create_expenses(get_user_parse_id(), amount, CLASSIFY_EXPENSE_BUSINESS, merchant, date, merchant, function(response){
      			//alert(response['id'])
      		});
         $(this).fadeOut();
@@ -42,7 +42,7 @@ $(document).ready(function(){
       var desc = $( this ).parent().find('.trans-desc-cell').text();
       var merchant = desc.substring(73,desc.length);
       //console.log(merchant);
-      create_expenses('bs-LolSWEeiSwL65ypsPBA', amount, 2, merchant, date, merchant, function(response){
+      create_expenses(get_user_parse_id(), amount, CLASSIFY_EXPENSE_PERSONAL, merchant, date, merchant, function(response){
      		//	alert(response['id'])
      		});
         $(this).prev().fadeOut();
