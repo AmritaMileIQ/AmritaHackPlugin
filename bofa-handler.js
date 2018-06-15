@@ -4,7 +4,7 @@ $(document).ready(function(){
   //console.log( index + ": " + $( this ).text() );
 
   if ( index == 0 ) {
-    $(this).append('<img class="section-logo" src="spendIcon.png" style="height: 50px;padding-left: 35px;">');
+    $(this).append('<img class="section-logo" src="icons/spendLogo.png" style="height: 40px;padding-left: 5px;">');
   }
   if ( index!=0 && index < 18) {
     //temp hard coded logic
