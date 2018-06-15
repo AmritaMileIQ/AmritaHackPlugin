@@ -13,8 +13,6 @@
 .px_MileIQ_AppIcon {
   width: 20px;
   height: 20px;
-  margin-top: -40px;
-  float: right;
   object-fit: contain;
 }
 
@@ -108,9 +106,19 @@
 }
 
 .Spend_SymbolCircle {
-  margin-top: -40px;
-  float: right;
   width: 20px;
   height: 20px;
   background-color: #9ad93a;
+}
+
+.time {
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  color: #666666;
 }

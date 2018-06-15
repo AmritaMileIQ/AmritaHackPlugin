@@ -10,7 +10,7 @@ $(document).ready(function(){
 //$("*").unbind("click"); // Removes all click handlers added by javascript from every element
 //$("[onclick]").removeAttr("onclick"); // Finds all elements with an 'onclick' attribute, and removes that attribute
 	//$("div").prop('onclick',null).off('click');
-	disableEvents();
+	//disableEvents();
 	//$('*').click(function(e){e.preventDefault();});
 
 	embedCardsInCalendar();
@@ -23,7 +23,7 @@ $(document).ready(function(){
   //   // Use any selector
   //   $("head").append("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\">");
   //   $("head").append(s);
-  $(".drive-personal-btn").click(function(e){
+  $("#drive-personal-btn").click(function(e){
     alert("drive personal clicked!");
     e.stopPropagation();
     // var dateStr = $( this ).parent().find('.trans-date-cell').text();
@@ -41,10 +41,6 @@ $(document).ready(function(){
     //     $(this).fadeOut();
     //     $(this).next().fadeOut();
     //     $(this).parent().append("<td>Added Business Expense</td>").hide().fadeIn();
-  });
-
-  $("#drive-personal-btn").mouseover(function() {
-    alert("drive personal clicked!");
   });
 
 $("#drive-business-btn").click(function(e){
@@ -120,9 +116,12 @@ function embedCardsInCalendar(){
   			var drive = response[i];
   			var driveCreationDate = new Date(drive.createdAt);
   			var dayOfDrive = driveCreationDate.getDate();
+        var timeOfDrive = driveCreationDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
   			var dayElementOnCalendar = getTestDayElement(dayOfDrive);
   			var drivesHTML = "<div style=\"height:100%; width:100%;\">" +
-            								"<img src=\"" + chrome.extension.getURL("mileiq-circle-icon.svg") + "\" class=\"px_MileIQ_AppIcon\"/>" + 
+                            "<div style=\"float:right;margin-top:-52px;height:30px\">" + 
+                            "<p class=\"time\">"+ "<span>" + timeOfDrive + "</span>" +
+            								"<img src=\"" + chrome.extension.getURL("mileiq-circle-icon.svg") + "\" class=\"px_MileIQ_AppIcon\"/></p></div>" + 
             								"<div class=\"driveCard\">" +
           						            "<p class=\"driveTitle\">"+ drive.startLocCity +" to "+ drive.endLocCity +"<br>"+
             						            "<div class=\"driveDetails\">" +
@@ -158,8 +157,11 @@ function embedCardsInCalendar(){
 			var expenseCreationDate = new Date(expense.expense_date);
 			var dayOfExpense = expenseCreationDate.getDate();
 			var dayElementOnCalendar = getTestDayElement(dayOfExpense);
+      var timeOfExpense = expenseCreationDate.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
       var expenseHTML = "<div style=\"height:100%; width:100%;\">" +
-                            "<img src=\"" + chrome.extension.getURL("SpendIcon.png") + "\" class=\"Spend_SymbolCircle\"/>" + 
+                            "<div style=\"float:right;margin-top:-52px;height:30px\">" + 
+                            "<p class=\"time\">"+ "<span>" + timeOfExpense + "</span>" +
+                            "<img style=\"margin-left:2px;float:right;\"src=\"" + chrome.extension.getURL("SpendIcon.png") + "\" class=\"Spend_SymbolCircle\"/></p></div>" + 
                             "<div class=\"expenseCard\">" +
                                   "<p class=\"expenseTitle\">"+ "$"+ Math.round(expense.amount * 10) / 10 + "<br>"+
                                     "<div class=\"expenseDetails\">" +
