@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="horizontal-div.css">
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+</head>
+<body>
+	<div id="main">
+	  	<div id="cards"></div>
+	  	<div id="feeds">
+	  		<div class="wrapper">
+				<h2>Example 1</h2>
+				<div class="demo1 demof">
+					<ul>
+						<li><img src="http://www.jqueryscript.net/small/images/jQuery-Plugin-To-Expand-Collapse-Input-Field-Expandable-Input.jpg" alt="Expandable Input" /><a href="http://www.jqueryscript.net/form/jQuery-Plugin-To-Expand-Collapse-Input-Field-Expandable-Input.html">Expandable Input</a>
+						<p>Expandable Input is a minimal jQuery plugin to smoothly expand the width of a input filed when focused/clicked and collapse it when lose focus.</p>
+						</li>
+						<li class="odd"><img src="http://www.jqueryscript.net/small/images/Creating-A-Full-Page-Photo-Gallery-with-jQuery-Photor-Plugin.jpg" alt="jQuery Photor Plugin" /><a href="http://www.jqueryscript.net/gallery/Creating-A-Full-Page-Photo-Gallery-with-jQuery-Photor-Plugin.html">jQuery Photor Plugin</a>
+						<p>Photor is a fast and easy jQuery plugin to create a responsive & touch-friendly full page image gallery with CSS3 transitions and transforms.</p>
+						</li>
+						<li><img src="http://www.jqueryscript.net/small/images/Windows-8-Style-jQuery-Data-Table-Decorator-Metreaux-Tables.jpg" alt="Metreaux Tables" /><a href="http://www.jqueryscript.net/table/Windows-8-Style-jQuery-Data-Table-Decorator-Metreaux-Tables.html">Metreaux Tables</a>
+						<p>Metreaux Tables is a jQuery plugin to create nice, clean, themeable, andmodern Windows 8 UI Style data tables with the power of DataTables jQuery javascript library.</p>
+						</li>
+						<li class="odd"><img src="http://www.jqueryscript.net/small/images/Creating-A-Full-Page-Photo-Gallery-with-jQuery-Photor-Plugin.jpg" alt="jQuery Photor Plugin" /><a href="http://www.jqueryscript.net/gallery/Creating-A-Full-Page-Photo-Gallery-with-jQuery-Photor-Plugin.html">jQuery Photor Plugin</a>
+						<p>Photor is a fast and easy jQuery plugin to create a responsive & touch-friendly full page image gallery with CSS3 transitions and transforms.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+     	</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+	<script src="jquery.easy-ticker.js"></script> 
+	<script>
+		$(function(){
+			$('.demo1').easyTicker({
+				direction: 'up',
+				easing: 'swing'
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+.driveCard {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.expenseCard {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.px_MileIQ_AppIcon {
+  width: 20px;
+  height: 20px;
+  margin-top: -40px;
+  float: right;
+  object-fit: contain;
+}
+
+.driveTitle {
+  width: 100%;
+  height: 14px;
+  margin-top: 40px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  color: #222222;
+}
+
+.expenseTitle {
+  margin-top: 40px;
+  width: 100%;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.5px;
+  color: #222222;
+}
+
+.driveDetails {
+  width: 100%;
+  height: 16px;
+  font-family: RealTextOffc;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #666666;
+}
+
+.expenseDetails {
+  width: 100%;
+  height: 16px;
+  font-family: RealTextOffc;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #666666;
+}
+
+.Rectangle-698 {
+  float: left;
+  width: 44px;
+  height: 26px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #20bdf0;
+  text-align: center;
+}
+
+.Rectangle-690 {
+  float: right;
+  width: 44px;
+  height: 26px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #ffffff;
+  border: solid 1px #0163b0;
+}
+
+.Personal-Fill-Color-24 {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.Business-Fill-Color-24 {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.Spend_SymbolCircle {
+  margin-top: -40px;
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-color: #9ad93a;
+}
