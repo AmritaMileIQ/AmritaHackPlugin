@@ -65,7 +65,7 @@
 
 h1 { margin: 0; }
 html, body { height: 100%; }
-body { padding: 10px; background: #222232; }
+body { padding: 10px; background: #f8f8f8; }
 
 
 ///////////////////////////////////////
@@ -81,7 +81,7 @@ body { padding: 10px; background: #222232; }
 
 .cardSubTitle {
   width: 375px;
- height: 23px;
+ height: 20px;
  font-family: RealTextOffc;
  font-size: 16px;
  font-weight: normal;
@@ -114,12 +114,16 @@ background-color: #00bcf2;
   object-fit: contain;
 }
 .map{
-  width: 199px;
+  width: 190px;
  height: 70px;
 }
 
 .btnHolder {
   padding-left: 20px;
+}
+
+.spendbtnHolder {
+  padding-top: 10px;
 }
 
 .mapHolder {
@@ -128,7 +132,7 @@ background-color: #00bcf2;
 
 .cardTitle{
   width: 296px;
-  height: 33px;
+  height: 30px;
   font-family: RealTextOffc;
   font-size: 24px;
   font-weight: normal;
@@ -145,8 +149,9 @@ background-color: #00bcf2;
   width: 54px;
   height: 62px;
   object-fit: contain;
-  padding-left: 160px;
-  padding-top: 40px;
+  left: 160px;
+  top: 40px;
+  position: relative;
 }
 
 .classifiedText {
@@ -161,7 +166,9 @@ background-color: #00bcf2;
   letter-spacing: normal;
   text-align: center;
   color: #222222;
-  padding-left: 110px;
+  left: 110px;
+  position: relative;
+  top:40px;
 }
 
 .classifiedSubText {
@@ -176,15 +183,36 @@ line-height: normal;
 letter-spacing: normal;
 text-align: center;
 color: #666666;
-padding-left: 70px;
+left: 60px;
+position: relative;
+top:20px;
+
 }
 
 .cardTop{
-  width: 400px;
+  width: 380px;
   height: 42px;
   background-color: #000000;
 }
 
 .cardTop .cards{
   padding: 0px;
+}
+
+#spend-container {
+  padding-top: 10px;
+}
+
+.section-logo {
+  padding-left: 238px;
+padding-top: 5px;
+height: 50px;
+margin: 10px;
+}
+
+.section-logo-spend {
+  padding-left: 238px;
+padding-top: 25px;
+height: 80px;
+margin: 10px;
 }
