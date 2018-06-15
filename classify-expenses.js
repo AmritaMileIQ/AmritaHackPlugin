@@ -15,7 +15,7 @@ function classify_expenses(user_parse_id, classify, comma_separated_expense_ids,
 	        	callback(response[0]);
 	      	},
 	      	error: function() {
-	        	alert('fail in classify_expenses')
+	        	//alert('fail in classify_expenses')
 	      	}
       	});
   });

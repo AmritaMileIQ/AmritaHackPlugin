@@ -23,7 +23,7 @@ function get_drives(user_parse_id, gt_date, lt_date, callback){
         callback(response['results']);
       },
       error: function() {
-        alert('fail in drives')
+        //alert('fail in drives')
       }
     });
 });
@@ -44,7 +44,7 @@ function get_drives_by_drive_id(user_parse_id, drive_parse_id, callback) {
         callback(response['results'][0]);
       },
       error: function() {
-        alert('fail in get_drives_by_drive_id')
+        //alert('fail in get_drives_by_drive_id')
       }
   });
 }
