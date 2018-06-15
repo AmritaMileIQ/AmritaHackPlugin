@@ -2,6 +2,10 @@ $(document).ready(function(){
      	//alert("Success!");
       $('#transactions').find("tr").each(function( index ) {
   //console.log( index + ": " + $( this ).text() );
+
+  if ( index == 0 ) {
+    $(this).append('<img class="section-logo" src="spendIcon.png" style="height: 50px;padding-left: 35px;">');
+  }
   if ( index!=0 && index < 18) {
     //temp hard coded logic
     var businessExpenseBtn = '<input class="add-expense-btn-bus" style="padding:5px ;" type="button"  value="Add Business Expense" />';
